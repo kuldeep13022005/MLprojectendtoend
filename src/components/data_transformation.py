@@ -46,7 +46,7 @@ class DataTransformation:
             
             num_pipeline = Pipeline(
                 steps=[
-                    ("imputer",SimpleImputer(strategy="median")),##handles the null(missing) value by replacing them to median
+                    ("imputer",SimpleImputer(strategy="median")), ##handles the null(missing) value by replacing them to median
                     ("scaler",StandardScaler())
                 ]
             )
@@ -150,5 +150,6 @@ class DataTransformation:
             
         except Exception as e:
             raise CustomException(e,sys)
+        
         
 
